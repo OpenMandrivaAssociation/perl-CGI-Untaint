@@ -13,6 +13,7 @@ BuildRequires:  perl-UNIVERSAL-exports
 BuildRequires:  perl-CGI
 BuildRequires:  perl-UNIVERSAL-require
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module provides a simple, convenient, abstracted and extensible
