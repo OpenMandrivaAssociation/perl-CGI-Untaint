@@ -1,26 +1,28 @@
-%define real_name CGI-Untaint
+%define upstream_name    CGI-Untaint
+%define upstream_version 1.26
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	CGI-Untaint Perl module: process CGI input parameters 
-Name:		perl-%{real_name}
-Version:	1.26
-Release:	%mkrel 6
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/T/TM/TMTM/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
-BuildRequires:  perl-UNIVERSAL-exports
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/T/TM/TMTM/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl-CGI
+BuildRequires:  perl-UNIVERSAL-exports
 BuildRequires:  perl-UNIVERSAL-require
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides a simple, convenient, abstracted and extensible
 manner for validating and untainting the input from web forms.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -40,5 +42,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/CGI/Untaint.pm
 %{perl_vendorlib}/CGI/Untaint
 %{_mandir}/*/*
-
-
