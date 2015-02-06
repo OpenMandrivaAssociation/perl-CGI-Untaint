@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Release:	5
 
 Summary:	CGI-Untaint Perl module: process CGI input parameters 
 License:	GPL+ or Artistic
