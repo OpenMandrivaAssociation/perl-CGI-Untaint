@@ -8,7 +8,7 @@ Release:	5
 Summary:	CGI-Untaint Perl module: process CGI input parameters 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/T/TM/TMTM/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
